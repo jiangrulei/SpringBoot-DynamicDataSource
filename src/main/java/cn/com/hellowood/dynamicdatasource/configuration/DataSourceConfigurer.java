@@ -35,7 +35,8 @@ public class DataSourceConfigurer {
     @Primary
     @ConfigurationProperties(prefix = "spring.datasource.hikari.master")
     public DataSource master() {
-        return DataSourceBuilder.create().build();
+        return new  DruidDataSource();
+        //return DataSourceBuilder.create().build();
     }
 
     /**
